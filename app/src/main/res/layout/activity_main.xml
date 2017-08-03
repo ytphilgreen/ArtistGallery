@@ -1,18 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="edu.cnm.bootcamp.yolanda.artistgallery.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout
 
-</android.support.constraint.ConstraintLayout>
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+   </FrameLayout>
+
+
+
+  <TextView
+android:id="@+id/txt_image_slider"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentLeft="true"
+android:padding="4dp"
+android:paddingLeft="20dp"
+android:text="@string/txt_image_slider"
+android:textColor="@color/holo_blue_dark"
+android:textSize="16sp"
+android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/image_display"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/txt_image_slider" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/popular_button" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/feature_button" />
+
+</LinearLayout>
